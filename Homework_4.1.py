@@ -1,4 +1,4 @@
-List=[1,0,3,0,5,0,6,0]
+List=[]
 count_list=len(List)
 Zero_count=List.count(0)
 

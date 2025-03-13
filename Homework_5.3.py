@@ -1,15 +1,25 @@
-user_input = str(input("Enter your value:"))
+import string
 
+user_input = str(input("Enter your value:"))
 
 title = user_input.title()
 strip = title.strip()
-print(strip)
 
-first_found_index=0
-for first_found_index in range(len(strip)):
+count=strip.count(" ")
 
-first_found_index = strip.find(" ")
-print (first_found_index)
-without_backspace = strip.replace(" ", "", first_found_index)
-print (without_backspace)
-first_found_index =+1
+i=0
+for i in range(count):
+    found_index = strip.find(" ")
+    if found_index>0:
+        strip = strip.replace(" ", "", found_index)
+        i = i+1
+    else:
+        break
+
+prohibited_symbols = string.punctuation
+
+for symbol in strip:
+    if symbol in prohibited_symbols:
+        strip=strip.replace(symbol,"")
+
+print (f"#{strip[0:140]}")

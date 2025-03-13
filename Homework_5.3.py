@@ -1,5 +1,6 @@
 user_input = str(input("Enter your value:"))
 
+
 title = user_input.title()
 strip = title.strip()
 print(strip)

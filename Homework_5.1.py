@@ -24,8 +24,9 @@ while True:
             print("False")
             break
     for i in your_variable:
-        if your_variable.isnumeric :
-            print("False")
+        if i.isnumeric() == True:
+            your_variable.replace(i,"")
+            print(your_variable.replace(i,""))
             break
 
     # if your_variable.islower() != True:

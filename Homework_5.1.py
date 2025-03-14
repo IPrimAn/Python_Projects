@@ -23,13 +23,14 @@ while True:
         if your_variable in test_data:
             print("False")
             break
+    for i in your_variable:
+        if your_variable.isnumeric :
+            print("False")
+            break
 
-    if your_variable.islower() != True:
-        print("False")
-        break
-
-    else:
-        break
-    if your_variable[0].isnumeric == True:
-        print("False")
-        continue
+    # if your_variable.islower() != True:
+    #     print("False")
+    #     break
+    # if your_variable[0].isnumeric == True:
+    #     print("False")
+    #     continue

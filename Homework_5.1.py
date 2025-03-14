@@ -2,24 +2,32 @@ import keyword
 import string
 string_punctuation = ""
 print (string.punctuation)
-for i in string.punctuation:
-    string_punctuation = string.punctuation.replace("_"," ")
+string_punctuation = string.punctuation.replace("_"," ")
 print(string_punctuation)
-# while True:
-#
-# your_variable = input('write name for variable and we will check it: ')
-#
-#     for i in your_variable:
-#         if your_variable.islower() == True:
-#         continue
-#         if your_variable.isnumeric(0) == True:
-#             print("False")
-#             continue
-#         else:
-#             continue
-#         if
 
+test_data=["__","___"]
 
+while True:
 
+    your_variable = input('Input your symbols for variable and we will check it: ')
 
+    if your_variable.islower() != True:
+        print("False")
+        continue
 
+    if your_variable[0].isnumeric == True:
+        print("False")
+        continue
+
+    for i in your_variable:
+        if i in string_punctuation:
+            print("False")
+            break
+        elif i in keyword.kwlist:
+            print("False")
+            continue
+        elif i in test_data:
+            print("False")
+        else:
+            break
+    print("True")
